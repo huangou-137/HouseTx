@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/*表单中相关标签选择器样式*/
+
+legend.legend_tab {
+    color: blue;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 5px 5px 5px white;
+}
+
+/*背景图标基础样式*/
+.icon-base {
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+/*用户图标样式*/
+.icon-user {
+    background-image:url(../img/icon/user.png) ;
+}
+
+/*管理员图标样式*/
+.icon-admin {
+    background-image: url("../img/icon/admin.png");
+}
+
+/*普通、登录密码图标样式*/
+.icon-pass, .icon-loginPass {
+    background-image:url(../img/icon/loginPass.png) ;
+}
+
+/*联系方式图标样式*/
+.icon-phone {
+    background-image:url(../img/icon/phone.png) ;
+}
+
+/*固话图标样式*/
+.icon-tel {
+    background-image:url(../img/icon/tel.png) ;
+}
+
+/*电子邮箱图标样式*/
+.icon-email {
+    background-image:url(../img/icon/email.png) ;
+}
+
+/*交易密码图标样式*/
+.icon-txPass {
+    background-image:url(../img/icon/txPass.png) ;
+}
+
+/*验证码图标样式*/
+.icon-code {
+    background-image: url(../img/icon/checkCode.png);
+}
+
+/*简介图标样式*/
+.icon-desc {
+    background-image: url(../img/icon/desc.png);
+}
+
+/*详细地址图标样式*/
+.icon-address {
+    background-image: url(../img/icon/address.png);
+}
+
+/*面积图标样式*/
+.icon-size {
+    background-image: url(../img/icon/size.png);
+}
+
+/*价格图标样式*/
+.icon-price {
+    background-image: url(../img/icon/price.png);
+}
+
+/*给所有需验证的输入框后的校验成功与否显示区域添加样式*/
+*[id$="_yn"] {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+/*给所有需验证的输入框后的错误提示信息区域添加样式*/
+*[id$="_tip"] {
+    font-size: 1px;
+    color: red;
+    line-height: 1px;
+}
+
+/*使用了layout布局时（即信息提示区域在card中）的样式*/
+.card *[id$="_yn"] {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/*使用了layout布局时的样式*/
+.card *[id$="_tip"] {
+    font-size: 1px;
+    color: red;
+    line-height: 10px;
+}

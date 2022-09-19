@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/*网页布局：头部区域、菜单导航区域、内容区域、底部区域*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* 头部标题 */
+.header {
+    padding: 10px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* 导航条 */
+.topnav {
+    overflow: hidden;
+    background-color: green;
+    font-family:"Times New Roman", Times, serif;
+    font-size:16px;
+}
+/* 导航条链接 */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+}
+/* 链接悬浮 */
+.topnav a:hover {
+    background-color: #f60;
+    color: white;
+}
+/* 链接激活 */
+.topnav a.active{
+    color:white;
+    background-color: #006000;
+}
+
+/* 创建三列 */
+/* 左侧栏 */
+.leftcolumn {
+    float: left;
+    width: 12%;
+    background-color: #f1f1f1;
+    padding-right: 20px;
+}
+/* 中间内容区域*/
+.midcolumn {
+    float: left;
+    width: 68%;
+}
+/* 右侧栏 */
+.rightcolumn {
+    float: left;
+    width: 20%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* 图像部分 */
+.fakeimg {
+    background-color: #FFFFF5;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 文章卡片效果 */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+/* 卡片h2标题样式*/
+.card-h2, .card h2 {
+    background-color: #00BFFF;
+    color: white;
+}
+
+/* 标题图标基本样式*/
+.iconH-base {
+    background-repeat: no-repeat;
+}
+
+/* h2标题图标基本样式*/
+.iconH2-base {
+    padding-left: 40px;
+    background-size:34px 34px;
+}
+
+/*放在中间*/
+.radio-center, div.btn-center {
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    display: flex;
+    justify-content: center;
+}
+
+/* 列后面清除浮动 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* 响应式布局 - 屏幕尺寸小于 800px 时，三列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .midcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}

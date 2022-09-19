@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*登录、注册页面专用样式*/
+
+/*登录、注册页面背景样式*/
+body {
+	background-image: url('../img/login_bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size:100% 100%;
+}
+
+/*登录、注册表单一般样式*/
+.form-panel {
+	background-color: GreenYellow;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-style: solid;
+	border-color: GreenYellow;
+	border-width: 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+/*表单模版中的文本区域样式*/
+.form-panel textarea {
+	height: 90px;
+	width: 270px;
+	resize: none;   /*禁止文本域拉伸*/
+}
+
+/*独有的页脚样式*/
+.footer {
+	position: absolute;
+	bottom: 0px;
+}

@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/*各页面通用样式*/
+
+/*错误、警告信息模块样式*/
+.msg_cont{
+	background: none repeat scroll 0 0 #fff6d2;
+	border: 1px solid #ffe57d;
+	color: #666;
+	height: 18px;
+	line-height: 18px;
+	padding: 3px 10px 3px 40px;
+	position: relative;
+	border: none;
+}
+/*错误、警告信息样式*/
+.errorMsg {
+	font-weight:bold;
+	color: red;
+}
+
+/*logo样式*/
+.logo_img {
+	float: left;
+	height: 40px;
+	width: 40px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/*垂直导航栏*/
+ul.ul_V {
+	background-color: #FFFAF0;
+}
+
+/*水平导航栏*/
+ul.ul_H {
+	background-color: #31B404;
+	font-family:"Times New Roman", Times, serif;
+	font-size:20px;
+}
+ul.ul_H li {
+	float: left;
+}
+
+li a {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+ul.ul_H a {
+	color: white;
+}
+ul.ul_V a {
+	color: black;
+}
+li a:hover,li a.hover {
+	color:white;
+	background-color: #f60;
+}
+ul.ul_H a.active{
+	color:#FAFAFA;
+	background-color: green;
+}
+/*下拉菜单*/
+.dropdown {
+	display: inline-block;
+}
+/*下拉菜单的子菜单*/
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #FFFAF0;
+	width: inherit;
+	/*添加阴影*/
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+ul.ul_H .dropdown-content a {
+	font-size:16px;
+	color: black;
+}
+/*光标悬浮在非已激活选项时，才显示其下拉菜单*/
+.dropdown:hover .dropdown-base:not(.active)+.dropdown-content {
+	display: block;
+}
+
+/*通用表格样式*/
+table {
+	border-style: none;
+	border-spacing: 5px 8px;
+	text-align: left;
+}
+table th {
+	text-align: right;
+}
+
+/*用以展示房屋、订单信息列表*/
+table.tb-list {
+	border-style: solid dotted;
+	text-align: center;
+}
+
+table.tb-list th {
+	border-style: solid;
+	border-color: purple;
+	text-align: center;
+	color: blueviolet;
+	background:#e9faff
+}
+
+table.tb-list td {
+	border-style: ridge;
+	border-color: #f1f1f1;
+	text-align: center;
+}
+
+/*重要label标签首字符样式*/
+label.imp {
+	color: red;
+}
+
+/*圆形区域*/
+.ovalArea {
+	border-radius: 50%;
+	border: none;
+}
+
+/*文本区域*/
+textarea {
+	resize: none;   /*禁止文本域拉伸*/
+	font-family:"Times New Roman",Times,serif;
+	font-size: 17px;
+}
+/*密钥、签名文本区域*/
+.keyTextArea, .signTextArea {
+	height: 90px;
+}
+/*简介文本区域*/
+.descTextArea {
+	height: 60px;
+}
+/*摘要文本区域*/
+.digestTextArea {
+	height: 30px;
+}
+
+/*不占用空间的隐藏样式*/
+.hidden {
+	display: none;
+}
+
+/*表格中内容为按钮的一般样式*/
+td.td-btn {
+	text-align: center;
+}
+
+/*表单提交按钮悬浮样式*/
+input[type=submit]:hover {
+	cursor: pointer;
+}
+
+.btn-common, .btn-common-red, .btn-common-blue {
+	color: white;
+	height: 40px;
+	border-style: none;
+	-webkit-border-radius: 5px;
+}
+/*一般按钮*/
+.btn-common {
+	background-color: green;
+}
+/*一般按钮-red背景*/
+.btn-common-red {
+	background-color: red;
+}
+/*一般按钮-蓝色背景*/
+.btn-common-blue {
+	background-color: blue;
+}
+
+/*可见按钮*/
+.btn-visible {
+	background-image: url(../img/btn/visible.png);
+	width: 26px;
+	height: 20px;
+	border-style: none;
+}
+
+/*不可见按钮*/
+.btn-invisible {
+	background-image: url(../img/btn/invisible.png);
+	width: 26px;
+	height: 20px;
+	border-style: none;
+}
+
+/*切换按钮*/
+.btn-switch {
+	background-image: url(../img/btn/switch.png);
+	width: 20px;
+	height: 20px;
+	border-style: none;
+}
+
+/*复制按钮*/
+.btn-copy {
+	background-image: url(../img/btn/copy.png);
+	width: 22px;
+	height: 22px;
+	border-style: none;
+}
+
+/*查看按钮*/
+.btn-details {
+	background-image: url(../img/btn/details.png);
+	width: 22px;
+	height: 22px;
+	border-style: none;
+}
+
+/*标题、菜单用户图标*/
+.iconH-user {
+	background-image: url("../img/icon_head/myUser.png");
+}

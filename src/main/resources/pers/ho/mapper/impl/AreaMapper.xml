@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.ho.mapper.AreaMapper">
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache" readOnly="true">
+        <!--   最长访问间隔时间：1个月 30×24××60×60    -->
+        <property name="timeToIdleSeconds" value="2592000"/>
+        <!--   存活时间：3个月 90×24××60×60     -->
+        <property name="timeToLiveSeconds" value="7776000"/>
+        <!-- 同ehcache参数maxElementsInMemory(内存) -->
+        <property name="maxEntriesLocalHeap" value="4000"/>
+        <!-- 同ehcache参数maxElementsOnDisk(磁盘) -->
+        <property name="maxEntriesLocalDisk" value="0"/>
+        <property name="diskExpiryThreadIntervalSeconds" value="7776000"/>
+    </cache>
+
+    <resultMap id="area" type="pers.ho.bean.Area">
+        <id column="area_id" property="id"/>
+    </resultMap>
+
+    <select id="getAreaById" resultMap="area">
+        SELECT * FROM `t_area` WHERE `area_id` = #{id}
+    </select>
+
+    <select id="getAreas" resultMap="area">
+        SELECT * FROM `t_area`
+    </select>
+
+</mapper>

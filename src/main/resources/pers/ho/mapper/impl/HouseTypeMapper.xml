@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.ho.mapper.HouseTypeMapper">
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache">
+        <property name="eternal" value="true"/>
+        <property name="maxEntriesLocalHeap" value="100"/>
+        <property name="maxEntriesLocalDisk" value="0"/>
+    </cache>
+
+    <resultMap id="houseType" type="pers.ho.bean.HouseType">
+        <id column="type_id" property="id"/>
+    </resultMap>
+
+    <select id="getHouseTypes" resultMap="houseType">
+        SELECT * FROM `t_house_type`
+    </select>
+
+    <select id="getHouseTypeMap" resultMap="houseType">
+        SELECT * FROM `t_house_type`
+    </select>
+
+</mapper>
